@@ -42,12 +42,13 @@ body{
 }
 
 .nav__item{
-     font-family: "Rubik Mono One", monospace;
+    font-size: 19px;
+     font-family: "oswald", sans-serif;
      opacity: 0.7;
 }
 
 .title__text{
-    font-family: "Saira Condensed", sans-serif;
+    font-family: "oswald", sans-serif;
     font-size: 130px;
     line-height: 130px;
 }
@@ -75,14 +76,27 @@ body{
 }
 
 .academy__info__text{
+    font-weight: 300;
     color: black;
-    font-family: Saira Condensed;
+    font-family: "oswald", sans-serif;
     padding-top: 60px;
+}
+
+.list{
+    margin-bottom: 150px;
+    padding-bottom: ;
+}
+
+.academy__info__list{
+    text-align: left;
+    font-weight: 300;
+    color: black;
+    font-family: "oswald", sans-serif;
 }
 
 .academy__info__title{
     color: black;
-    font-family: Saira Condensed;
+    font-family: "oswald";
     font-size: 40px;
     text-transform: uppercase;
 }
@@ -319,11 +333,23 @@ input[type=number] {
   font-family: "oswald";
 }
 
+.enroll__inner{
+    display: flex;
+    align-items: center;
+ }
+
 @media screen and (max-width: 1024px){
     .container{
         width: 100%;
         padding: 0 15px;
     }
+
+    .academy{
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
         .photo{
         max-width: 100%;
@@ -339,7 +365,7 @@ input[type=number] {
 
     .academy__info__text{
     color: black;
-    font-family: Saira Condensed;
+    font-family: "oswald", sans-serif;
     padding-top: 30px;
 }
     .motivate__text{
@@ -374,6 +400,10 @@ input[type=number] {
 }
 
 @media screen and (max-width: 768px){
+    .enroll__inner{
+        justify-content: center;
+    }
+
     .header__nav{
         display: none;
     }
@@ -475,7 +505,7 @@ input[type=number] {
 @media screen and (max-width: 360px){
 
 .title__text{
-    font-family: "Saira Condensed", sans-serif;
+    font-family: "oswald", sans-serif;
     font-size: 100px;
     line-height: 130px;
 }
