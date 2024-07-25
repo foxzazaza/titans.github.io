@@ -116,11 +116,41 @@ body{
     top: 50%;
 }
 
-.player__week__page{
-    background: url() center no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
+.coaches__block__inner{
+}
+
+.coach__block{
+    display: flex;
+    align-items: center;
+    gap: 62px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 105px;
+}
+
+.coach__name{
+    color: black;
+    font-family: "oswald", sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.coach__work{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.coach__description{
+    color: black;
+    font-family: "oswald", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-top: 49px;
 }
 
 @media screen and (max-width: 1024px){
@@ -155,12 +185,51 @@ body{
     font-style: normal;
 }
 
+        .coach__block{
+    display: flex;
+    align-items: center;
+    gap: 62px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 105px;
+}
+
+    .coach__name{
+        color: black;
+        font-family: "oswald", sans-serif;
+        font-weight: 700;
+        font-size: 35px;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 768px){
     .header__nav{
         display: none;
     }
+
+    .coach__work{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.coach__name{
+    color: black;
+    font-family: "oswald", sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
 }
 
 @media screen and (max-width: 550px){
@@ -176,4 +245,15 @@ body{
     text-align: center;
     font-style: normal;
 }
+
+    .coach__name{
+        color: black;
+        font-family: "oswald", sans-serif;
+        font-weight: 700;
+        font-size: 35px;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
 }
