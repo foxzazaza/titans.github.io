@@ -475,6 +475,11 @@ input[type=number] {
 .enroll__inner {
     display: flex;
     align-items: center;
+    gap: 154px;
+}
+
+.ball{
+    max-width: 500px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -482,11 +487,24 @@ input[type=number] {
         width: 100%;
         padding: 0 15px;
     }
-
+        .enroll__inner {
+            justify-content: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+}
     @media screen and (max-width: 1024px) {
         .container {
             width: 100%;
             padding: 0 15px;
+        }
+
+        .ball{
+            max-width: 400px;
+        }
+
+        .enroll__mot{
+            text-align: center;
         }
 
         .academy {
@@ -562,6 +580,11 @@ input[type=number] {
         .header__nav {
             display: none;
         }
+
+        .ball{
+            max-width: 300px;
+        }
+
 
         .coach__work {
             font-size: 20px;
