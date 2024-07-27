@@ -405,7 +405,7 @@ body {
     gap: 60px;
 }
 
-label{
+.privacy{
     display: flex;
     gap: 10px;
 }
