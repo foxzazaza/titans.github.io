@@ -12,6 +12,14 @@ body {
     margin: 0;
 }
 
+.form__send-result{
+   padding: 10px 10px 0 10px;
+   text-align: center;
+   font-size: 20px;
+   font-family: "oswald", sans-serif;;
+   font-weight: 400;
+   color: green;
+}
 
 /*CONTAINER*/
 .container {
@@ -395,7 +403,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    padding-top: 85px;
 }
 
 .enroll__input {

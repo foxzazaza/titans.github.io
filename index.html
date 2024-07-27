@@ -177,13 +177,28 @@
         <h2 class="enroll__mot">Присоединитесь к команде!</h2>
 
         <div class="enroll__inner">
-          <form class="form" method="POST" action="sendTelegram.php">
-            <input placeholder="ИМЯ" name="name" type="text" class="enroll__input" required>
-            <input placeholder="ФАМИЛИЯ" name="sname" type="text" class="enroll__input" required>
-            <input placeholder="ПОЛНЫХ ЛЕТ" name="age" type="number" class="enroll__input" required>
-            <input placeholder="ТЕЛЕФОН" name="phone" type="tel" class="enroll__input" required>
-            <input value="Отправить" name="butSub" type="Submit" class="enroll__button" required>
-          </form>
+
+          <form class="form" onsubmit="sendEmailTelegram(event)">
+            <div class="form__stripes-block">
+                <div class="form__line"></div>
+            </div>
+            <div class="form">
+                <input type="text" name="name" autocomplete="off" maxlength="50" placeholder="ИМЯ" class="enroll__input" required>
+
+                <input type="text" name="sname" autocomplete="off" maxlength="50" placeholder="ФАМИЛИЯ" class="enroll__input" required>
+
+                <input type="number" name="age" autocomplete="off" maxlength="50" placeholder="ПОЛНЫХ ЛЕТ" class="enroll__input" required>
+                
+                <input type="tel" name="phone" autocomplete="off" maxlength="15" placeholder="ТЕЛЕФОН" class="enroll__input" required>
+            </div>
+            <div class="form__submit-block">
+                <div class="form__submit-button">
+                    <button type="submit" class="enroll__button">Отправить</button>
+                </div>
+            </div>
+            <div class="form__send-result"></div>
+        </form>
+
         </div>
 
       </div>
@@ -287,6 +302,60 @@
       });
     });
   </script>
+
+<script type="text/javascript">
+	"use strict"
+//==========================================
+const TELEGRAM_BOT_TOKEN = '7285555170:AAFYqt-unYvsnnGTNLRCnvSJP7OwZPhxDzU';
+const TELEGRAM_CHAT_ID = '-4268516201';
+const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
+
+
+async function sendEmailTelegram(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formBtn = document.querySelector('.form__submit-button button')
+    const formSendResult = document.querySelector('.form__send-result')
+    formSendResult.textContent = '';
+
+
+    const { name, sname, age, phone } = Object.fromEntries(new FormData(form).entries());
+    
+    const text = `Имя: ${name}\nФамилия: ${sname}\nВозраст: ${age}\nТелефон: ${phone}`;
+
+
+    try {
+        formBtn.textContent = 'Загрузка...';
+
+        const response = await fetch(API, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: TELEGRAM_CHAT_ID,
+                text,
+            })
+        })
+        
+        if (response.ok) {
+            formSendResult.textContent = 'Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.';
+            form.reset()
+        } else {
+            throw new Error(response.statusText);
+        }
+
+    } catch (error) {
+        console.error(error);
+        formSendResult.textContent = 'Анкета не отправлена! Попробуйте позже.';
+        formSendResult.style.color = 'red';
+
+    } finally {
+        formBtn.textContent = 'Отправить';
+    }
+}
+</script>
 
 </body>
 
