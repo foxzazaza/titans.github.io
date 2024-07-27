@@ -12,13 +12,14 @@ body {
     margin: 0;
 }
 
-.form__send-result{
-   padding: 10px 10px 0 10px;
-   text-align: center;
-   font-size: 20px;
-   font-family: "oswald", sans-serif;;
-   font-weight: 400;
-   color: green;
+.form__send-result {
+    padding: 10px 10px 0 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: "oswald", sans-serif;
+    ;
+    font-weight: 400;
+    color: green;
 }
 
 /*CONTAINER*/
@@ -251,7 +252,7 @@ body {
     padding-top: 105px;
 }
 
-.coach__name{
+.coach__name {
     color: black;
     font-family: "oswald", sans-serif;
     font-weight: 700;
@@ -405,18 +406,18 @@ body {
     gap: 60px;
 }
 
-.privacy{
+.privacy {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.city{
+.city {
     font-family: "oswald", sans-serif;
     font-size: 20px;
 }
 
-.politika{
+.politika {
     color: black;
     font-family: "oswald", sans-serif;
     font-weight: 300;
@@ -482,221 +483,221 @@ input[type=number] {
         padding: 0 15px;
     }
 
-@media screen and (max-width: 1024px) {
-    .container {
-        width: 100%;
-        padding: 0 15px;
+    @media screen and (max-width: 1024px) {
+        .container {
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .academy {
+            min-height: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo {
+            max-width: 100%;
+        }
+
+        .academy__inner {
+            display: flex;
+            text-align: center;
+            gap: 30px;
+            justify-content: center;
+            top: 50%;
+            flex-wrap: wrap;
+        }
+
+        .academy__info__text {
+            color: black;
+            font-family: "oswald", sans-serif;
+            padding-top: 30px;
+        }
+
+        .academy__info {
+            padding-top: 0;
+            margin: 0;
+        }
+
+        .motivate__text {
+            font-family: "oswald", sans-serif;
+            font-weight: 700;
+            font-size: 35px;
+            text-transform: uppercase;
+            text-align: center;
+            font-style: normal;
+        }
+
+        .coach__block {
+            display: flex;
+            align-items: center;
+            gap: 62px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 105px;
+        }
+
+        .coach__name {
+            color: black;
+            font-family: "oswald", sans-serif;
+            font-weight: 700;
+            font-size: 35px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .coach__work {
+            text-align: center;
+        }
     }
 
-    .academy {
-        min-height: 900px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    @media screen and (max-width: 768px) {
+        .enroll__inner {
+            justify-content: center;
+        }
+
+        .header__nav {
+            display: none;
+        }
+
+        .coach__work {
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .coach__name {
+            color: black;
+            font-family: "oswald", sans-serif;
+            font-weight: 700;
+            font-size: 45px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .footer__inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 50px;
+        }
+
+        .media {
+            display: flex;
+            gap: 31px;
+            flex-wrap: wrap;
+            padding-top: 30px;
+        }
+
+        .footer__nav {
+            padding-top: 30px;
+            padding-left: 0;
+        }
+
+        .enroll__input {
+            background-color: #D9D9D9;
+            border: 0;
+            width: 350px;
+            border-radius: 60px;
+            height: 70px;
+        }
+
+        .enroll__button {
+            color: white;
+            font-family: "oswald";
+            font-size: 20px;
+            background-color: black;
+            border: 0;
+            width: 350px;
+            border-radius: 60px;
+            height: 70px;
+        }
+
+        .form {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .enroll__mot {
+            text-align: center;
+        }
+
     }
 
-    .photo {
-        max-width: 100%;
+    @media screen and (max-width: 550px) {
+        .header__nav {
+            display: none;
+        }
+
+        .motivate__text {
+            font-family: "oswald", sans-serif;
+            font-weight: 700;
+            font-size: 25px;
+            text-transform: uppercase;
+            text-align: center;
+            font-style: normal;
+        }
+
+        .coach__name {
+            color: black;
+            font-family: "oswald", sans-serif;
+            font-weight: 700;
+            font-size: 35px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .title__text {
+            font-family: "oswald", sans-serif;
+            font-size: 90px;
+            line-height: 130px;
+        }
+
+        .academy {
+            display: flex;
+            align-items: center;
+        }
+
+        .academy__inner {
+            padding-top: 50px;
+        }
+
     }
 
-    .academy__inner {
-        display: flex;
-        text-align: center;
-        gap: 30px;
-        justify-content: center;
-        top: 50%;
-        flex-wrap: wrap;
+    @media screen and (max-width: 360px) {
+
+        .title__text {
+            font-family: "oswald", sans-serif;
+            font-size: 100px;
+            line-height: 130px;
+        }
+
+        .enroll__input {
+            background-color: #D9D9D9;
+            border: 0;
+            width: 300px;
+            border-radius: 60px;
+            height: 70px;
+        }
+
+        .enroll__button {
+            color: white;
+            font-family: "oswald";
+            font-size: 20px;
+            background-color: black;
+            border: 0;
+            width: 300px;
+            border-radius: 60px;
+            height: 70px;
+        }
+
     }
-
-    .academy__info__text {
-        color: black;
-        font-family: "oswald", sans-serif;
-        padding-top: 30px;
-    }
-
-    .academy__info{
-        padding-top: 0;
-        margin: 0;
-    }
-
-    .motivate__text {
-        font-family: "oswald", sans-serif;
-        font-weight: 700;
-        font-size: 35px;
-        text-transform: uppercase;
-        text-align: center;
-        font-style: normal;
-    }
-
-    .coach__block {
-        display: flex;
-        align-items: center;
-        gap: 62px;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-top: 105px;
-    }
-
-    .coach__name {
-        color: black;
-        font-family: "oswald", sans-serif;
-        font-weight: 700;
-        font-size: 35px;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    .coach__work{
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .enroll__inner {
-        justify-content: center;
-    }
-
-    .header__nav {
-        display: none;
-    }
-
-    .coach__work {
-        font-size: 20px;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    .coach__name {
-        color: black;
-        font-family: "oswald", sans-serif;
-        font-weight: 700;
-        font-size: 45px;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    .footer__inner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding-top: 50px;
-    }
-
-    .media {
-        display: flex;
-        gap: 31px;
-        flex-wrap: wrap;
-        padding-top: 30px;
-    }
-
-    .footer__nav {
-        padding-top: 30px;
-        padding-left: 0;
-    }
-
-    .enroll__input {
-        background-color: #D9D9D9;
-        border: 0;
-        width: 350px;
-        border-radius: 60px;
-        height: 70px;
-    }
-
-    .enroll__button {
-        color: white;
-        font-family: "oswald";
-        font-size: 20px;
-        background-color: black;
-        border: 0;
-        width: 350px;
-        border-radius: 60px;
-        height: 70px;
-    }
-
-    .form {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .enroll__mot {
-        text-align: center;
-    }
-
-}
-
-@media screen and (max-width: 550px) {
-    .header__nav {
-        display: none;
-    }
-
-    .motivate__text {
-        font-family: "oswald", sans-serif;
-        font-weight: 700;
-        font-size: 25px;
-        text-transform: uppercase;
-        text-align: center;
-        font-style: normal;
-    }
-
-    .coach__name {
-        color: black;
-        font-family: "oswald", sans-serif;
-        font-weight: 700;
-        font-size: 35px;
-        text-transform: uppercase;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    .title__text {
-        font-family: "oswald", sans-serif;
-        font-size: 90px;
-        line-height: 130px;
-    }
-
-    .academy {
-    display: flex;
-    align-items: center;
-}
-
-.academy__inner{
-    padding-top: 50px;
-}
-
-}
-
-@media screen and (max-width: 360px) {
-
-    .title__text {
-        font-family: "oswald", sans-serif;
-        font-size: 100px;
-        line-height: 130px;
-    }
-
-    .enroll__input {
-        background-color: #D9D9D9;
-        border: 0;
-        width: 300px;
-        border-radius: 60px;
-        height: 70px;
-    }
-
-    .enroll__button {
-        color: white;
-        font-family: "oswald";
-        font-size: 20px;
-        background-color: black;
-        border: 0;
-        width: 300px;
-        border-radius: 60px;
-        height: 70px;
-    }
-
-}
