@@ -405,6 +405,19 @@ body {
     gap: 60px;
 }
 
+label{
+    display: flex;
+    gap: 10px;
+}
+
+.politika{
+    color: black;
+    font-family: "oswald", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
 .enroll__input {
     background-color: #D9D9D9;
     border: 0;
@@ -421,6 +434,7 @@ body {
 }
 
 .enroll__button {
+    cursor: pointer;
     color: white;
     font-family: "oswald";
     font-size: 20px;
