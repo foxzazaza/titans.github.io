@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <script src="https://unpkg.com/imask"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -189,12 +190,13 @@
 
                 <input type="number" name="age" autocomplete="off" maxlength="50" placeholder="ПОЛНЫХ ЛЕТ" class="enroll__input" required>
                 
-                <input type="tel" name="phone" autocomplete="off" maxlength="15" placeholder="ТЕЛЕФОН" class="enroll__input" required>
+                <input type="tel" name="phone" id="phone" autocomplete="off" maxlength="16" placeholder="ТЕЛЕФОН" class="enroll__input" required>
 
-                <label class="privacy">
+                <div class="privacy">
                 	<input type="checkbox" required>
                 	<p class="politika">я соглашаюсь с <a href="politika.html" target="_blank">политикой конфиденциальности</a></p>
-                </label>
+                </div>
+
             </div>
             <div class="form__submit-block">
                 <div class="form__submit-button">
@@ -362,6 +364,14 @@ async function sendEmailTelegram(event) {
 }
 </script>
 
+<script type="text/javascript">
+	IMask(
+		document.getElementById('phone'),
+			{
+				mask: '+{7}(000)000-00-00'
+			}
+		)
+</script>
 </body>
 
 </html>

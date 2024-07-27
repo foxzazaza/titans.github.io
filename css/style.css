@@ -408,6 +408,7 @@ body {
 .privacy{
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .politika{
@@ -415,7 +416,6 @@ body {
     font-family: "oswald", sans-serif;
     font-weight: 300;
     font-size: 17px;
-    margin-bottom: 4px;
 }
 
 .enroll__input {
@@ -470,6 +470,12 @@ input[type=number] {
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
 
 @media screen and (max-width: 1024px) {
     .container {
