@@ -1,3 +1,5 @@
+<?
+
 /*получаем значения полей из формы*/
 $name = $_POST['name'];
 $phone = $_POST['phone'];
@@ -19,16 +21,26 @@ function parser($url){
     }
 }
 
-/*собираем сообщение*/
-$message .= "Новое сообщение из формы";
-$message .= "Имя: ".$name;
-$message .= "Фамилия:".$sname;
-$message .= "Возраст:".$age;
-$message .= "Телефон:".$phone;
+function orderSendTelegram($message) {
 
-/*токен который выдаётся при регистрации бота */
-$token = "7285555170:AAFYqt-unYvsnnGTNLRCnvSJP7OwZPhxDzU";
-/*идентификатор группы*/
-$chat_id = "-4268516201";
-/*делаем запрос и отправляем сообщение*/
-parser("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$message}");
+    /*токен который выдаётся при регистрации бота */
+    $token = "7285555170:AAFYqt-unYvsnnGTNLRCnvSJP7OwZPhxDzU";
+    /*идентификатор группы*/
+    $chat_id = "-4268516201";
+
+    /*делаем запрос*/
+    parser("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$message}");
+
+}
+
+/*собираем сообщение*/
+$textmessage .= "Новое сообщение из формы\n";
+$textmessage .= "Имя: ".$name."\n";
+$textmessage .= "Фамилия:".$sname."\n";
+$textmessage .= "Возраст:".$age."\n";
+$textmessage .= "Телефон:".$phone;
+$textmessage = urlencode($textmessage);
+
+orderSendTelegram($textmessage);
+
+?>
