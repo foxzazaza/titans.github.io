@@ -191,7 +191,7 @@ body {
 }
 
 .list {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     padding-bottom: ;
 }
 
@@ -411,6 +411,11 @@ body {
     align-items: center;
 }
 
+.city{
+    font-family: "oswald", sans-serif;
+    font-size: 20px;
+}
+
 .politika{
     color: black;
     font-family: "oswald", sans-serif;
@@ -484,7 +489,7 @@ input[type=number] {
     }
 
     .academy {
-        height: 900px;
+        min-height: 900px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -507,6 +512,11 @@ input[type=number] {
         color: black;
         font-family: "oswald", sans-serif;
         padding-top: 30px;
+    }
+
+    .academy__info{
+        padding-top: 0;
+        margin: 0;
     }
 
     .motivate__text {
@@ -657,7 +667,7 @@ input[type=number] {
 }
 
 .academy__inner{
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 }
